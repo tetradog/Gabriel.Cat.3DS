@@ -57,10 +57,7 @@ long GetPosition()
 
 bool CanFullRead()
 {
-    u8* buffer=malloc(length);
-    bool canRead=buffer;
-    delete buffer;
-    return canRead;
+   return CanRead(length);
 }
 bool CanRead(long length)
 {
