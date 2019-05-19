@@ -16,6 +16,9 @@ class Stream
         long GetPosition();
         bool CanFullRead();
         bool CanRead(long length);
+
+        operator u8*() const { return FullRead(); }
+
     protected:
 
     private:

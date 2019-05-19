@@ -1,13 +1,12 @@
 #include "FileStream.h"
-#include <string.h>
-#include <stdio.h>
+
 
 string path;
-string openMode;
+FileMode openMode;
 FILE *file;
 bool isOpened;
 
-FileStream::FileStream(string path,string openMode)
+FileStream::FileStream(string path,FileMode openMode)
 {
     FILE *file;
     //ctor
@@ -41,7 +40,7 @@ void Open()
 {
     if(!isOpened)
     {
-        file=fopen(path,openMode);
+        file=fopen(path,(string)openMode);
         isOpened=true;
     }
 
