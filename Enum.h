@@ -1,11 +1,12 @@
 #ifndef ENUM_H
 #define ENUM_H
-#include <string.h>
+
+#include <string>
 
 class Enum
 {
     public:
-        Enum(string name);
+        Enum(string name); 
         virtual ~Enum();
         string ToString();
         //para que funcione en el switch

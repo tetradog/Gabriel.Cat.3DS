@@ -17,7 +17,7 @@ class Stream
         bool CanFullRead();
         bool CanRead(long length);
 
-        operator u8*() const { return FullRead(); }
+		operator u8* () const { return FullRead(); };
 
     protected:
 

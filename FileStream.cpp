@@ -1,26 +1,23 @@
 #include "FileStream.h"
+using namespace std;
 
 
-string path;
-FileMode openMode;
-FILE *file;
-bool isOpened;
 
 FileStream::FileStream(string path,FileMode openMode)
 {
     FILE *file;
     //ctor
-    this.isOpened=false;
+    this->isOpened=false;
 
-    this.path=path;
-    this.openMode=openMode;
+    this->path=path;
+    this->openMode=openMode;
 
     Open();
     // seek to end of file
     fseek(file,0,SEEK_END);
 
     // file pointer tells us the size
-    this.lenght = ftell(file);
+    this->lenght = ftell(file);
 
     // seek back to start
     fseek(file,0,SEEK_SET);
@@ -33,24 +30,24 @@ FileStream::~FileStream()
 {
     //dtor
     Close();
-    delete path;
-    delete openMode;
+    delete this->path;
+    delete this->openMode;
 }
 void Open()
 {
-    if(!isOpened)
+    if(!this->isOpened)
     {
-        file=fopen(path,(string)openMode);
-        isOpened=true;
+        this->file=fopen(this->path,(string)this->openMode);
+        this->isOpened=true;
     }
 
 }
 void Close()
 {
-     if(isOpened)
+     if(this->isOpened)
     {
-        fclose(file);
-        isOpened=false;
+        fclose(this->file);
+        this->isOpened=false;
      }
 }
 u8* Read(long inicio,long length)
@@ -58,7 +55,7 @@ u8* Read(long inicio,long length)
 
     u8* buffer=malloc(length);
     Open();
-    fread(buffer,inicio,length,file);
+    fread(buffer,inicio,length,this->file);
 
     return buffer;
 

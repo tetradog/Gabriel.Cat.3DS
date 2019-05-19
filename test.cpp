@@ -1,8 +1,13 @@
-#import <FileMode.h>
-#import <FileStream.h>
+#include <iostream>
+#include "FileMode.h"
+using namespace std;
+
 void Main()
 {
-    FileMode rb=FileMode.RB;
-    cout << rb ;
-    FileStream fs=new FileStream("path file");
+    FileMode rb=FileMode::RB;
+
+    //FileStream fs=new FileStream("path file");
+    switch(rb){
+	case FileMode::RB: cout<<"funciona :D"; break;
+    }
 }

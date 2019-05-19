@@ -1,7 +1,10 @@
+#include <string>
+#include "Enum.h"
+
 #ifndef FILEMODE_H
 #define FILEMODE_H
-#import <Enum.h>
-#import <string.h>
+
+
 
 class FileMode:public Enum
 {
@@ -9,10 +12,11 @@ class FileMode:public Enum
 
         virtual ~FileMode();
 
-        static FileMode RB=new FileMode("rb");
+         static FileMode RB=new FileMode("rb");
     protected:
-        FileMode(string name):Enum(name){}
+       
     private:
+		FileMode(string name) :Enum(name) {}
 };
 
 #endif // FILEMODE_H

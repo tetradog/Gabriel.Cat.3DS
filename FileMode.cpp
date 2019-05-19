@@ -1,6 +1,6 @@
 #include "FileMode.h"
 
-FileMode::FileMode()
+FileMode::FileMode(string name)
 {
     //ctor
 }

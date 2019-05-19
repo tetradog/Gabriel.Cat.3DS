@@ -4,20 +4,20 @@ static int generadorId=0;
 
 
 
-Enum::Enum(string name)
+Enum::Enum(string name) 
 {
     //ctor
-    this.name=name;
-    id=generadorId++;
+    this->name=name;
+    this->id=generadorId++;
 }
 
 Enum::~Enum()
 {
     //dtor
-    delete this.name;
+    delete this->name;
 }
 
 string ToString()
 {
-    return name;
+    return this->name;
 }
