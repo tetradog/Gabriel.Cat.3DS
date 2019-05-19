@@ -2,8 +2,12 @@
 #define FILESTREAM_H
 #include <string>
 #include "stdio.h"
+
 #include "FileMode.h"
 #include "Stream.h"
+
+using namespace std;
+
 class FileStream: public Stream
 {
     public:

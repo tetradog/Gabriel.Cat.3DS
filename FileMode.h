@@ -1,4 +1,5 @@
-#include <string>
+#include "string.h"
+
 #include "Enum.h"
 
 #ifndef FILEMODE_H
@@ -8,15 +9,16 @@
 
 class FileMode:public Enum
 {
+	private:
+		FileMode(string name) :Enum(name) {}
     public:
 
         virtual ~FileMode();
-
-         static FileMode RB=new FileMode("rb");
+		//todas las opciones validas
+        static const FileMode RB=new FileMode("rb");
     protected:
-       
-    private:
-		FileMode(string name) :Enum(name) {}
+
+
 };
 
 #endif // FILEMODE_H

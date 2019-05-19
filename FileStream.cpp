@@ -1,5 +1,4 @@
 #include "FileStream.h"
-using namespace std;
 
 
 
@@ -12,7 +11,7 @@ FileStream::FileStream(string path,FileMode openMode)
     this->path=path;
     this->openMode=openMode;
 
-    Open();
+	this->Open();
     // seek to end of file
     fseek(file,0,SEEK_END);
 
@@ -22,7 +21,7 @@ FileStream::FileStream(string path,FileMode openMode)
     // seek back to start
     fseek(file,0,SEEK_SET);
 
-    Close();
+	this->Close();
 
 }
 
@@ -33,7 +32,7 @@ FileStream::~FileStream()
     delete this->path;
     delete this->openMode;
 }
-void Open()
+void FileStream::Open()
 {
     if(!this->isOpened)
     {
@@ -42,7 +41,7 @@ void Open()
     }
 
 }
-void Close()
+void FileStream::Close()
 {
      if(this->isOpened)
     {
@@ -50,11 +49,11 @@ void Close()
         this->isOpened=false;
      }
 }
-u8* Read(long inicio,long length)
+u8* FileStream::Read(long inicio,long length)
 {
 
     u8* buffer=malloc(length);
-    Open();
+    this->Open();
     fread(buffer,inicio,length,this->file);
 
     return buffer;
