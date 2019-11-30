@@ -9,7 +9,7 @@ u8 IdUser;
 u16 IdSaveData;
 u16 IdParent;//saveData anterior para poder recuperar partidas y hacer árboles
 SaveData(){}
-static GetSaveData(u8 saveType){}
+static SaveData GetSaveData(u8 saveType){}
 
 protected:
 

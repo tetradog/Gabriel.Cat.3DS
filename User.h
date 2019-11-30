@@ -32,7 +32,7 @@ string Autho;
 
 u8 GetId(){}
 string ToSaveLine(){}
-
+return IdUnique+";"+ThemeId+";"+Name+";"+Email+";"+Autho;
 
 
 }
