@@ -33,6 +33,12 @@ u8* Read(long leght)
     }
     return subBuffer;
 }
+u8 ReadU8(){
+	return *Read(1);
+}
+u16 ReadU16(){
+	return *((u16*)Read(2));//no se si se puede
+}
 
 u8* ReadToEnd()
 {
