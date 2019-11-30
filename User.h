@@ -30,7 +30,7 @@ string Email;
 string Autho;
 
 
-u8 GetIdUnique(){}
+u8 GetId(){}
 string ToSaveLine(){}
 
 

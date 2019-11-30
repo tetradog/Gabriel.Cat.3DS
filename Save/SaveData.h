@@ -9,7 +9,7 @@ u8 IdUser;
 u16 IdSaveData;
 u16 IdParent;//saveData anterior para poder recuperar partidas y hacer árboles
 SaveData(){}
-
+static GetSaveData(u8 saveType){}
 
 protected:
 
@@ -30,5 +30,6 @@ public:
 	Stream ToFileStream(){} //serialitze all ID then GetStream() 
 
 	virtual u8 GetSaveDataType();//define to easy Load File
-	static SaveData Load(Stream file){}//lee los ids y  el id tipo con un switch cargo la adecuada
+	static SaveData Load(Stream file,bool closeStream){}//lee los ids y  el id tipo con un switch cargo la adecuada
+
 }
