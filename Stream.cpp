@@ -19,7 +19,7 @@ bool EndOfStream()
     return position+1==length;
 }
 
-u8* Read(long leght)
+u8* Read(long lenght)
 {
     u8* subBuffer;
     if(!EndOfStream())
@@ -42,17 +42,17 @@ u16 ReadU16(){
 
 u8* ReadToEnd()
 {
-    return Read(lenght-posicion);
+    return Read(this->lenght-this->posicion);
 }
 u8* FullRead(){
-return Read(0,lenght);
+return Read(0,this->lenght);
 }
 void SetPosition(long position)
 {
     if(position<0)
         position=0;
-    else if(position>lenght)
-        position=lenght-1;
+    else if(position>this->lenght)
+        position=this->lenght-1;
 
     this.position=position;
 }

@@ -8,7 +8,7 @@
 #include "VirtualMachine/GBC.h"
 #include "VirtualMachine/GB.h"
 
-~User(){
+User::~User(){
 
 	delete this->IdUser;
 	delete this->IdSaveData;
