@@ -15,7 +15,7 @@ class FileStream: public Stream
         FileStream(string path):FileStream(path,FileMode::RB){}
         virtual ~FileStream();
         void Close();
-        u8* Read(long inicio,long length);
+        ByteArray Read(long inicio,long length);
     protected:
 
     private:

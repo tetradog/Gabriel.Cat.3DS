@@ -49,13 +49,13 @@ void FileStream::Close()
         this->isOpened=false;
      }
 }
-u8* FileStream::Read(long inicio,long length)
+ByteArray FileStream::Read(long inicio,long length)
 {
 
     u8* buffer=malloc(length);
     this->Open();
     fread(buffer,inicio,length,this->file);
 
-    return buffer;
+    return ByteArray(buffer,length);
 
 }

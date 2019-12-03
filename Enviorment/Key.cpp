@@ -49,7 +49,101 @@ Key::~Key()
     //dtor
 }
 
-Key Now()
+static Key Key::Now()
 {
-    return new Key();
+    return  Key();
 }
+
+ static bool Key::IsStartClicked(){
+     return hidKeysDown()&KEY_START;
+ }
+        static bool Key::IsSelectClicked(){
+             return hidKeysDown()&KEY_SELECT;
+        }
+
+        static bool Key::IsHomeClicked(){
+             return hidKeysDown()&KEY_H;
+        }
+
+        static bool Key::IsAClicked(){
+             return hidKeysDown()&KEY_A;
+        }
+        static bool Key::IsBClicked(){
+             return hidKeysDown()&KEY_B;
+        }
+        static bool Key::IsXClicked(){
+             return hidKeysDown()&KEY_X;
+        }
+        static bool Key::IsYClicked(){
+             return hidKeysDown()&KEY_Y;
+        }
+
+        static bool Key::IsUpClicked(){
+             return hidKeysDown()&KEY_UP;
+        }
+        static bool Key::IsDownClicked(){
+             return hidKeysDown()&KEY_DOWN;
+        }
+        static bool Key::IsLeftClicked(){
+             return hidKeysDown()&KEY_LEFT;
+        }
+        static bool Key::IsRightClicked(){
+             return hidKeysDown()&KEY_RIGHT;
+        }
+
+        static bool Key::IsLClicked(){
+             return hidKeysDown()&KEY_L;
+        }
+        static bool Key::IsRClicked(){
+             return hidKeysDown()&KEY_R;
+        }
+        //new compatibility
+        static bool Key::IsZLClicked(){
+             return hidKeysDown()&KEY_ZL;
+        }
+        static bool Key::IsZRClicked(){
+             return hidKeysDown()&KEY_ZR;
+        }
+
+        static bool Key::IsDPadLeftClicked(){
+             return hidKeysDown()&KEY_DLEFT;
+        }
+        static bool Key::IsDPadRightClicked(){
+             return hidKeysDown()&KEY_DRIGHT;
+        }
+        static bool Key::IsDPadUpClicked(){
+             return hidKeysDown()&KEY_DUP;
+        }
+        static bool Key::IsDPadDownClicked(){
+             return hidKeysDown()&KEY_DDOWN;
+        }
+        //new compatibility
+        static bool Key::IsCPadLeftClicked(){
+             return hidKeysDown()&KEY_CPAD_LEFT;
+        }
+        static bool Key::IsCPadRightClicked(){
+             return hidKeysDown()&KEY_CPAD_RIGHT;
+        }
+        static bool Key::IsCPadUpClicked(){
+             return hidKeysDown()&KEY_CPAD_UP;
+        }
+        static bool Key::IsCPadDownClicked(){
+             return hidKeysDown()&KEY_CPAD_DOWN;
+        }
+
+        static bool Key::IsStickLeftClicked(){
+             return hidKeysDown()&KEY_CSTICK_LEFT;
+        }
+        static bool Key::IsStickRightClicked(){
+             return hidKeysDown()&KEY_CSTICK_RIGHT;
+        }
+        static bool Key::IsStickUpClicked(){
+             return hidKeysDown()&KEY_CSTICK_UP;
+        }
+        static bool Key::IsStickDownClicked(){
+             return hidKeysDown()&KEY_CSTICK_DOWN;
+        }
+
+        static bool Key::IsTouchClicked(){
+             return hidKeysDown()&KEY_TOUCH;
+        }

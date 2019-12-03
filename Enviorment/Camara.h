@@ -1,3 +1,5 @@
+#include "Image.h"
+
 #ifndef CAMARA_H
 #define CAMARA_H
 
@@ -27,7 +29,7 @@ class Camara
 
         int camId;//front/left/right
         bool Inicializada;
-        static bool haciendoFoto3d=false;
+        static bool haciendoFoto3d;
 
         Camara(int camId);
 

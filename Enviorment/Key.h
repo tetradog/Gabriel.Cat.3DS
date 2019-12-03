@@ -48,6 +48,44 @@ class Key
 
         static Key Now();
 
+        static bool IsStartClicked();
+        static bool IsSelectClicked();
+
+        static bool IsHomeClicked();
+
+        static bool IsAClicked();
+        static bool IsBClicked();
+        static bool IsXClicked();
+        static bool IsYClicked();
+
+        static bool IsUpClicked();
+        static bool IsDownClicked();
+        static bool IsLeftClicked();
+        static bool IsRightClicked();
+
+        static bool IsLClicked();
+        static bool IsRClicked();
+        //new compatibility
+        static bool IsZLClicked();
+        static bool IsZRClicked();
+
+        static bool IsDPadLeftClicked();
+        static bool IsDPadRightClicked();
+        static bool IsDPadUpClicked();
+        static bool IsDPadDownClicked();
+        //new compatibility
+        static bool IsCPadLeftClicked();
+        static bool IsCPadRightClicked();
+        static bool IsCPadUpClicked();
+        static bool IsCPadDownClicked();
+
+        static bool IsStickLeftClicked();
+        static bool IsStickRightClicked();
+        static bool IsStickUpClicked();
+        static bool IsStickDownClicked();
+
+        static bool IsTouchClicked();
+
     protected:
 
     private:

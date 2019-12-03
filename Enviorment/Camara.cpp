@@ -4,6 +4,7 @@ Camara::Camara()
 {
     //ctor
     this.Inicializada=false;
+    Camara::haciendoFoto3d=false;
 }
 
 Camara::~Camara()

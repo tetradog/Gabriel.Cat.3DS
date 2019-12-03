@@ -1,15 +1,25 @@
+#include "Stream.h"
 
-class ByteArray{
+class ByteArray
+{
 
+	private:
+		const u8*  data8;
+		const u16* data16;
+		int length;
 	public:
-	const u8* Data;
-	const u16 Length;
+	
+	 
 
-	ByteArray(u8* data,u16 length){}
+	ByteArray(u8* data,int length){}
+	ByteArray(u16* data,int length){}
 	~ByteArray(){}
 
+	int getLength() const;
+	
+
 	static ByteArray U8ToArray(u8 data){}
-	static ByteArray U16ToArray(u16 data){}
+	static ByteArray U16ToArray(int data){}
 
 
 }

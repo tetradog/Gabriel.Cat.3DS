@@ -5,8 +5,8 @@ class MemoryStream: public Stream
 {
 	private:
 	ByteArray[] buffers;
-	u8 posBuffers;
-	u16 posBuffer;
+	int posBuffers;
+	long posBuffer;
 
 	public:
 
